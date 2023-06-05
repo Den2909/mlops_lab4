@@ -18,3 +18,12 @@ df['Age'] = imputer.fit_transform(df['Age'].values.reshape(-1, 1))
 df.head()
 
 df.to_csv("./datasets/test.csv")
+
+#Creating a new attribute using one-hot-encoding for the "Sex" column
+encoder = OneHotEncoder(sparse=False)
+encoded_features = encoder.fit_transform(df['Sex'].values.reshape(-1, 1))
+encoded_df = pd.DataFrame(encoded_features, columns=encoder.categories_[0])
+df = pd.concat([df, encoded_df], axis=1)
+
+df.to_csv("./datasets/test.csv")
+
