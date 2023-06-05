@@ -1,2 +1,6 @@
 ['remote "mydisk"']
     url = gdrive://1Qcu9gmfD9b5uVCyor_5XXVNB0nbXk26z
+    gdrive_use_service_account = true
+    gdrive_service_account_json_file_path = /home/mlo/Study/J_SON_file/thematic-answer-388914-a76c33584c93.json
+['remote "g_disk"']
+    url = gdrive://1Qcu9gmfD9b5uVCyor_5XXVNB0nbXk26z
